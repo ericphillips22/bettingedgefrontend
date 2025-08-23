@@ -1,0 +1,23 @@
+.App {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td {
+  padding: 6px;
+  border-bottom: 1px solid #eee;
+}
+
+table td:first-child {
+  font-weight: bold;
+  width: 40%;
+}
