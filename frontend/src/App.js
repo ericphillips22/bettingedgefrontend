@@ -143,7 +143,8 @@ function App() {
 
       {/* Betting Predictions */}
       {selectedGameId && (
-        import BettingPredictions from './components/BettingPredictions';
+        const BettingPredictions = lazy(() => import('./components/BettingPredictions'));
+       import { lazy } from 'react';
       )}
 
       <footer className="text-center p-4 text-sm text-gray-500 border-t">
