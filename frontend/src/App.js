@@ -143,7 +143,7 @@ function App() {
 
       {/* Betting Predictions */}
       {selectedGameId && (
-        <BettingPredictions gameId={selectedGameId} />
+        import BettingPredictions from './components/BettingPredictions';
       )}
 
       <footer className="text-center p-4 text-sm text-gray-500 border-t">
