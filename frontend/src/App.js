@@ -1,6 +1,8 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import './App.css';
-  const BettingPredictions = lazy(() => import('./components/BettingPredictions'));
+
+// Lazy load BettingPredictions
+const BettingPredictions = lazy(() => import('./components/BettingPredictions'));
 
 // Update this to your Render backend URL
 const API_BASE = 'https://bettingedge-backend.onrender.com/api';
@@ -42,7 +44,7 @@ function App() {
   const samplePlayers = [
     { id: 3917, name: 'Stephen Curry', team: 'GSW' },
     { id: 3059, name: 'LeBron James', team: 'LAL' },
-    { id: 4233, name: 'Luka Doncic', team: 'DAL' }
+        { id: 4233, name: 'Luka Doncic', team: 'DAL' }
   ];
 
   return (
@@ -120,7 +122,7 @@ function App() {
           <p>No games scheduled or data unavailable.</p>
         ) : (
           <div className="space-y-4">
-            {games.map(game => (
+                      {games.map(game => (
               <div
                 key={game.id}
                 className="border rounded-lg p-4 bg-white shadow-sm cursor-pointer"
@@ -142,10 +144,12 @@ function App() {
         )}
       </main>
 
-      {/* Betting Predictions */}
+      {/* Betting Predictions (Lazy Loaded) */}
       {selectedGameId && (
-      const BettingPredictions = lazy(() => import('./components/BettingPredictions'));
-       import { lazy } from 'react';)}
+        <Suspense fallback={<p className="text-sm text-gray-500 p-4">Loading predictions...</p>}>
+          <BettingPredictions gameId={selectedGameId} />
+        </Suspense>
+      )}
 
       <footer className="text-center p-4 text-sm text-gray-500 border-t">
         For personal use only • Data from ESPN (unofficial API)
