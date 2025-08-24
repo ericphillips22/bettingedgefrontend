@@ -1,5 +1,6 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import './App.css';
+  const BettingPredictions = lazy(() => import('./components/BettingPredictions'));
 
 // Update this to your Render backend URL
 const API_BASE = 'https://bettingedge-backend.onrender.com/api';
