@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import './App.css';
 
 // Update this to your Render backend URL
@@ -143,7 +143,7 @@ function App() {
 
       {/* Betting Predictions */}
       {selectedGameId && (
-        const BettingPredictions = lazy(() => import('./components/BettingPredictions'));
+      const BettingPredictions = lazy(() => import('./components/BettingPredictions'));
        import { lazy } from 'react';)}
 
       <footer className="text-center p-4 text-sm text-gray-500 border-t">
