@@ -144,8 +144,7 @@ function App() {
       {/* Betting Predictions */}
       {selectedGameId && (
         const BettingPredictions = lazy(() => import('./components/BettingPredictions'));
-       import { lazy } from 'react';
-      )}
+       import { lazy } from 'react';)}
 
       <footer className="text-center p-4 text-sm text-gray-500 border-t">
         For personal use only • Data from ESPN (unofficial API)
